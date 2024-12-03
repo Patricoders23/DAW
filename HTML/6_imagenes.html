@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCHES</title>
+    <style>
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            flex-direction: column; /* Alinear filas verticalmente */
+            align-items: center;
+            gap: 20px; /* Espacio entre filas */
+            width: 80%; /* Ajustar el ancho del contenido */
+            margin: 0 auto; /* Centrar en la página */
+        }
+
+        /* Estilo para cada fila */
+        .row {
+            border: 2px solid black; /* Borde negro */
+            padding: 15px;
+            width: 100%; /* Ajustar al contenedor principal */
+            text-align: center; /* Centrar el contenido */
+            box-sizing: border-box; /* Incluir padding dentro del ancho */
+        }
+
+        /* Título encima de la imagen */
+        h2 {
+            margin: 0; /* Eliminar márgenes extra */
+        }
+
+        /* Texto debajo de la imagen */
+        p {
+            margin: 10px 0 10px; /* Espacio superior entre imagen y texto */
+        }
+
+        /* Estilo para el enlace */
+        a {
+            text-decoration: none; /* Eliminar subrayado */
+            color: blue; /* Color azul para los vínculos */
+            font-weight: bold; /* Texto en negrita */
+        }
+
+        /* Tamaño de las imágenes */
+        img {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Fila 1 -->
+        <div class="row">
+            <h2>Primer coche</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTta8FDnb72NiVHqLX9e53ctF-vjfmFOtuZJg&s" alt="coche blanco">
+            <p>Este es un coche blanco deportivo.</p>
+            <a href="https://example.com/coche-blanco" target="_blank">MAS INFORMACIÓN</a>
+        </div>
+        <!-- Fila 2 -->
+        <div class="row">
+            <h2>Segundo coche</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQumvqcvtLI1phkzx13uArZT00qX8iMbvCspQ&s" alt="coche antiguo">
+            <p>Un coche clásico y antiguo.</p>
+            <a href="https://example.com/coche-antiguo" target="_blank">MAS INFORMACIÓN</a>
+        </div>
+        <!-- Fila 3 -->
+        <div class="row">
+            <h2>Tercer coche</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCgJwTgJKf6s-IGVo5FZsbum-CiWHuX56gTA&s" alt="Fuera de serie">
+            <p>Un coche moderno fuera de serie.</p>
+            <a href="https://example.com/coche-moderno" target="_blank">MAS INFORMACIÓN</a>
+        </div>
+    </div>
+</body>
+</html>
