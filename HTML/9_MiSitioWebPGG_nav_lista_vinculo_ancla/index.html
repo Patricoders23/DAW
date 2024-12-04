@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patricia García</title>
+    <h1>Patricia García</h1>
+    <style>
+        #menu {
+            background-color: #f1d7f1;
+            padding: 10px 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            font-style: initial;
+        }
+        li{
+            background-color: aquamarine;
+            display: inline-block;
+            text-decoration: double;
+        }
+        li a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            background-color: blue;
+            border-radius: 5px;
+            transition-duration: 0s;
+        }
+        /* Hover Efecto al pasar el mouse */
+        #menu li a:hover{
+            background-color: rgb(201, 15, 201);
+            transform: scale(1.1);
+        }
+        #menu li a.active {
+            background-color: #FFD700;
+            color: #333;
+        }
+        ol, div, h1{
+            text-align: center;
+            font-family: Arial;
+
+        }
+        img{
+            width: 520px;
+            height: 320px;
+            object-fit: cover;
+        }
+        div{
+            height: 400px;
+            margin-top: 100px;
+        }
+        div a{
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- <p>lorem ipsum </p> -->
+
+    <ol id="menu"> 
+
+        <li>
+            <a href="#am" class="active">About me</a>
+        </li>
+        <li><a href="#ds">Data Science</a></li>
+        <li><a href="#en">Engineering</a></li>
+        <li><a href="#wd">Web Development</a></li>
+    </ol>
+
+    <div>
+        <h1 id="am">ABOUT ME</h1>
+        <img src="imagenes/me.jfif" alt="Mi experience">
+        <p>Professional </p>
+    <a href="#menu">Come back to menu</a>
+    </div>
+
+    <div>
+        <h1 id="ds">DATA SCIENCE</h1>
+        <img src="imagenes/dc.jfif" alt="Data Science experience">
+        <p>Experience en Data Science</p>
+        <a href="#menu">Come back to menu</a>
+    </div>
+
+    <div>
+        <h1 id="en">ENGINEERING</h1>
+        <img src="imagenes/eng.jfif" alt="Engineering experience">
+        <p>Experience in Oil&Gas Engineering</p>
+        <a href="#menu">Come back to menu</a>
+    </div>
+
+    <div>
+        <h1 id="wd">WEB DEVELOPMENT</h1>
+        <img src="imagenes/wd.jfif" alt="Web Development Experience">
+        <p>Learning Web Development</p>
+        <a href="#menu">Come back to menu</a>
+    </div>
+
+</body>
+</html>
