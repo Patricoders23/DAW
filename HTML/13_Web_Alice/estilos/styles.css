@@ -1,0 +1,41 @@
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ol {
+    text-align: center;
+    background-color: black;
+    /* border-radius: 16px; */
+
+    font-family: cursive;
+    margin: 5px;
+    margin-top: 10px;
+    padding: 10px;
+}
+body{
+    background-color: rgb(225, 238, 216);
+}
+
+li{
+    text-align: center;
+    display: inline-block;
+    border-radius: 16px;
+    margin: 5px;
+    padding: 10px;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+a:link {
+    color: rgb(239, 228, 240);
+}
+/* a:active {
+    color: red;
+} */
+a:hover { 
+    color: greenyellow;
+}
+
+</style>
