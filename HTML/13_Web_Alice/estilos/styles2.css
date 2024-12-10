@@ -8,7 +8,6 @@
 .navegacion{
 background-color: black;
 position: fixed;
-/* width: 100%;  */
 padding: 15px;
 width: 100%; 
 }
@@ -57,7 +56,6 @@ h2{
 #s{
     padding: 70px 0px;
     width: 800px;
-    margin: auto;
     background-color: aquamarine;
 }
 
@@ -77,6 +75,85 @@ h2{
     background-color: chocolate;
     /* display in line block */
     margin-left: 200px;
+    text-align: justify;    
+}
+.paralax{
+    height: 500px;
+    background-image: -moz-repeating-radial-gradient(10px);
+    background-attachment: fixed;
+
+}
+.paralax2{
+    height: 500px;
+    padding: 60px 0;
+    width: 800px;
+    margin: auto;
+}
+
+#s #d, #c, #r, #f{
+margin-bottom: 20px;
+text-align: justify;
+}
+
+#s p, #c p, #r p{
+    margin-bottom: 20px;
     text-align: justify;
+}
+
+#s div, #c div, #r p{
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#d figure figcaption p{
+    margin: 20px 5px;
+    text-align: justify;
+
+}
+
+#d figure img{
+    float: left;
+    clear: both;
+}
+
+#f img{
+    width: 23%;
+    margin-left: 8x;
+    border: 3px chocolate double;
+}
+
+.pie{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(245, 171, 33);
+    color: white;
+    padding: 15px 0px;
+}
+
+.i1:hover{
+    filter: blur(4px);
+}
+.i2:hover{
+filter: brightness(50%);
+}
+.i3:hover{
+    filter: contrast(50%);
+}
+.i4:hover{
+    filter: brightness(50%);
+}
+.i5:hover{
+    filter: hue-rotate(80deg);
+}
+.i6:hover{
+    filter: invert(150%);
+}
+.i7:hover{
+    filter: saturate(10) blur(5px);
+    -webkit-filter: saturate(10) blur(8px);
+}
+.i8:hover{
+    filter: sepia(50%)
     
+    ;
 }
