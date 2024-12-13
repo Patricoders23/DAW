@@ -26,10 +26,16 @@ body {
 .logo {
     display: inline-block;
     padding: 10px 20px;
+    transition: transform 0.3s ease;
 }
 
+.logo:hover {
+    transform: translateX(500px); /* Mueve el logo 500px a la derecha */
+}
+
+
 .logo h1 {
-    font-size: 1.5rem;
+    font-size: 4rem;
     color: #333;
 }
 
@@ -69,7 +75,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('img/hero-bg.jpg') center/cover no-repeat fixed;
+    background: url('imgs/promotion.jpg') center/cover no-repeat fixed;
     height: 100vh;
     color: white;
     text-align: center;
@@ -80,7 +86,7 @@ body {
 }
 
 .hero h2 {
-    font-size: 3rem;
+    font-size: 5rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -107,7 +113,7 @@ body {
 
 /* Parallax Section 1 */
 .parallax-1 {
-    background: url('img/parallax-1.jpg') center/cover no-repeat fixed;
+    background: url('imgs/carousel-1.jpg') center/cover no-repeat fixed;
     height: 400px;
 }
 
@@ -132,7 +138,7 @@ body {
 
 /* Parallax Section 2 */
 .parallax-2 {
-    background: url('img/parallax-2.jpg') center/cover no-repeat fixed;
+    background: url('imgs/carousel-2.jpg') center/cover no-repeat fixed;
     height: 400px;
 }
 

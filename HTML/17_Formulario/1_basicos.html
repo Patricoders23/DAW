@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla HTML</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid red;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: yellow;
+            color: black;
+        }
+        td {
+            background-color: yellow;
+        }
+        caption{ 
+            background-color: gray;
+            color: white;
+            font-weight: bold;
+            border: 2px solid black;
+            padding: 10px;
+            display: table-caption;
+            caption-side: top;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>ALUMNO</caption>
+        <tr>
+            <th rowspan="2">HTML</th>
+            <td>TRIMESTRE 1</td> 
+            <td>TRIMESTRE 2</td>
+          </tr>
+          <tr>
+            <td>NOTABLE</td>
+            <td>BIEN</td>
+          </tr>
+          <tr>
+            <th rowspan="2">CSS</th>
+            <td>TRIMESTRE 1</td>
+            <td>TRIMESTRE 2</td>
+          </tr>
+          <tr>
+            <td>NOTABLE</td>
+            <td>APROBADO</td>
+          </tr>
+    </table>
+</body>
+</html>
