@@ -1,39 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .container{
-            background-color: darkgray;
-            width: 90%;
-            margin: 20px auto;
-            border-radius: 5px;
-            padding: 10px;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-
-        }
-
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background-color: gray;
+      }
+      main {
+        background-color: white;
+        width: 800px;
+        margin: 20px;
+        border-radius: 10px;
+        padding: 10px;
+        margin: auto;
+      }
+      /* Encabezado */
+      header {
+        background-color: gray;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      header h2 {
+        color: white;
+        font-size: 1.2em;
+      }
+      nav {
+        background-color:gainsboro;
+        margin-top: 10px;
+        border-radius: 10px;
+      }
+      nav ul{
+        padding: 5px;
+      }
+      nav ul li{
+        display: inline-block;
+        color: white;
+        border-right: solid;
+        border-color: white;
+        padding: 0px 5px;
+      }
+      nav a:hover {
+        color: #333;
+      }
+      section {
+        margin-top: 10px;
+        width: 500px;
+        background-color: yellow;
+        display: inline-block;
+      }
+      article {
+        /* flex: 2; */
+        padding: 5px;
+      }
+      aside {
+        flex: 1;
+        background-color: gainsboro;
+        width: 200px;
+        border-radius: 10px;
+        float: right;
+        margin-top: 10px;
+        text-align: center;
+      }
+      figcaption{
+        background-color: aqua;
+        padding-left: 50px;
+        text-align: left;
+      }
+      img{
+        width: 150px;
+      }
+      footer{
+        background-color: gainsboro;
+        color: wheat;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+      footer p{
+        padding: 5px;
+        text-align: center;
+      }
     </style>
-    
-</head>
-<body>
+
+
+  </head>
+
+  <body>
+    <main>
     <!-- Contenedor principal -->
-    <div class="container">
-        <!-- Encabezado -->
+      <!-- Encabezado -->
         <header>
             <h1>Mi sitio web h1</h1>
             <h2>El eslogan de mi sitio web h2</h2>
         </header>
 
-        <nav></nav>
-    </div>
- 
+        <nav>
+            <a href="#">vinculo 1</a> | <a href="#">vinculo 2</a> |
+            <a href="#">vinculo 3</a> | <a href="#">vinculo 4</a> |
+            <a href="#">vinculo 5</a> |
+            <a href="#">vinculo 6</a>
+        </nav>
+
+        <section>
+            <article>
+          <!-- <h3>Mi primer artículo</h3> -->
+                <p>Mi primer artículo<br />Morbi leo risus...<br />Integer poseur</p>
+            </article>
+            <article>
+                <h3>Mi segundo artículo</h3>
+                <p>Morbi leo risus...<br />Integer poseur</p>
+            </article>
+            <article>
+                <h3>Mi tercer artículo</h3>
+                <p>Morbi leo risus...<br />Integer poseur</p>
+            </article>
+
+        </section>
+
+        <!-- Barra lateral con imagen -->
+        <aside>
+          <figure>
+            <img src="img/tigre.jpg" alt="Imagen de Tigre" />
+            <figcaption>
+              <ul>
+                <li>Primero</li>
+                <li>Segundo</li>
+                <li>Tercero</li>
+                <li>Cuarto</li>
+              </ul>
+            </figcaption>
+          </figure>
+        </aside>
+
+        <footer>
+            <p>Concepción y realización Ivan. Contacto: <a href="">contacto@dominio.org</a> </p>
+        </footer>
+    </main>
+
 </body>
 </html>
