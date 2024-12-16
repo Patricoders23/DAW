@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Patri</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        form{
+            width: 320px;
+            background-color: whitesmoke;
+            padding: 5px;
+        }
+
+        textarea{
+            width: 100%;
+        }
+        label{
+            display: inline-block;
+            
+            width: 250px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="">
+
+        <!-- Sección de Datos Personales -->
+        <fieldset>
+            <legend>DATOS PERSONALES</legend>
+            <label for="nombre">Nombre del Propietario</label>
+            <input type="text" id="nombre" name="nombre" placeholder="ESCRIBE MAYÚSCULAS">
+
+            <label for="telefono">Dime el telefono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu teléfono">
+
+            <label for="correo">Dime tu correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="Escribe tu correo">
+        </fieldset>
+        
+        <!-- Sección Datos Vehículo -->
+        <fieldset>
+            <legend>DATOS DEL VEHÍCULO</legend>
+            <label for="vehiculo">Selecciona tu Vehículo</label>
+            <select name="vehiculo" id="vehiculo" required>
+                <option value="toyota">Toyota</option>
+                <option value="lexus">Lexus</option>
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes</option>
+            </select>
+            <label for="anio">De que año es:</label>
+            <input type="date" id="anio" name="anio" required>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

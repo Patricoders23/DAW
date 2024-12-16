@@ -3,57 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla HTML</title>
+    <title>Document</title>
     <style>
-        table {
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        form{
+            width: 320px;
+            background-color: red;
+            padding: 5px;
+        }
+
+        textarea{
             width: 100%;
-            border-collapse: collapse;
         }
-        th, td {
-            border: 1px solid red;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: yellow;
-            color: black;
-        }
-        td {
-            background-color: yellow;
-        }
-        caption{ 
-            background-color: gray;
-            color: white;
-            font-weight: bold;
-            border: 2px solid black;
-            padding: 10px;
-            display: table-caption;
-            caption-side: top;
-            text-align: center;
+        label{
+            display: inline-block;
+            
+            width: 250px;
         }
     </style>
+    
 </head>
 <body>
-    <table>
-        <caption>ALUMNO</caption>
-        <tr>
-            <th rowspan="2">HTML</th>
-            <td>TRIMESTRE 1</td> 
-            <td>TRIMESTRE 2</td>
-          </tr>
-          <tr>
-            <td>NOTABLE</td>
-            <td>BIEN</td>
-          </tr>
-          <tr>
-            <th rowspan="2">CSS</th>
-            <td>TRIMESTRE 1</td>
-            <td>TRIMESTRE 2</td>
-          </tr>
-          <tr>
-            <td>NOTABLE</td>
-            <td>APROBADO</td>
-          </tr>
-    </table>
+    <form action="">
+        <label for="opinion">Dime en pocas lineas tu opinion</label>
+        <textarea name="opinion1" rows="10" cols="50"></textarea>
+
+        <label for="cursos">¿selecciona entre cursos?</label>
+        <select name="crusos" id="">
+            <option value="html">html</option>
+            <option selected value="css">css</option>
+            <option value="javascript">javascript</option>
+            <option value="php">php</option>
+        </select>
+
+        <label for="nombre">dime tu nombre</label>
+            <input name="nombre" type="text">
+        <label for="edad">dime tu edad</label>
+            <input type="edad" type="number">
+        <label for="color">que color te gustaria</label>
+            <input type="color" type="color">
+        <label for="archivo">aqui el archivo</label>
+            <input type="file">
+            <input type="date">
+            <input type="datetime-local">
+            <input type="email">
+
+            <input type="submit" value="envialo">
+            <input type="reset" value="borrar">
+            <input type="button" value="suma">
+            <input type="hidden" name="hola">
+            <input type="password">
+            <input type="checkbox">
+            <p>Otra manera de seleccion de cursos, con input solo podemos seleccionar uno</p>
+            <input type="radio" name="cr" id="">HTML
+            <input type="radio" name="cr" id="">css
+            <input type="radio" name="cr" id="">javascript
+            <input type="range">
+            <!-- <button type="submit">suma</button> -->
+    </form>
 </body>
 </html>
