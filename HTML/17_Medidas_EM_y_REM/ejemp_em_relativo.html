@@ -1,0 +1,22 @@
+<style>
+    html {
+        font-size: 10px; /* Base */
+    }
+    .padre {
+        font-size: 2em; /* 2 * 10px = 20px */
+    }
+    .hijo {
+        font-size: 1.5em; /* 1.5 * 20px = 30px */
+    }
+</style>
+
+<!-- 1. em (medida relativa) Acumulativo
+em es una unidad relativa al tamaño de fuente del elemento padre.
+Si el elemento padre tiene una fuente de 10px y establecemos font-size: 
+2em, la fuente del hijo será el doble del tamaño del padre (20px).
+Además, em es acumulativa cuando hay varios niveles de anidamiento de elementos. -->
+
+<div class="padre">
+    Soy 2em (20px)
+    <div class="hijo">Soy 1.5em respecto al padre (30px)</div>
+</div>

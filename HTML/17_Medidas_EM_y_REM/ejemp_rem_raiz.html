@@ -1,0 +1,20 @@
+<style>
+    html {
+        font-size: 10px;
+    }
+    .padre {
+        font-size: 2rem; /* Siempre 2 * 10px = 20px */
+    }
+    .hijo {
+        font-size: 1.5rem; /* Siempre 1.5 * 10px = 15px */
+    }
+</style>
+
+<!-- rem (medida raíz) No acumulativo
+rem (root em) es una medida relativa al tamaño de fuente raíz definido en el elemento html y no se acumula.
+Si html { font-size: 10px }, entonces 1rem será siempre igual a 10px, independientemente del tamaño del elemento padre. -->
+
+<div class="padre">
+    Soy 2rem (20px)
+    <div class="hijo">Soy 1.5rem (15px)</div>
+</div>
