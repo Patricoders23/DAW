@@ -1,0 +1,27 @@
+/* Reseteo navegadores */
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  background-color: aqua;
+  display: flex; 
+  /* flex-direction: column-reverse; */
+  /* flex-wrap: wrap; */
+  /* flex-flow: column-reverse; */
+  justify-content: space-around;
+  /* flex-flow: wrap-reverse; */
+
+  height: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+}
+
+.container div{
+  background-color: red;
+  border: 1px solid black;
+  height: 50px;
+}
+
+

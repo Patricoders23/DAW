@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+.hidden, .hiddenT{display: none;}
+body {
+  background: url(../images/tendencias_zapatos_de_salon_primavera_verano_2013_293219986_900x900.jpg);
+  background-color: rgba(255, 166, 0, 0.745)
+}
+main {
+  width: 90%;
+  margin: auto;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+form{
+  width: 100%;
+  background-color: rgba(220, 20, 60, alpha);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(7, auto);
+  grid-template-areas: "nombre"
+                        "inputNombre"
+                        "telf"
+                        "inputTelf"
+                        "";
+}
+form > input{
+  height: 2rem;
+  padding: 3rem;
+}
+
+
