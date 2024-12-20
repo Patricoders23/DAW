@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  /* font-family: system-ui; */
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(3, 100px);
+  grid-template-areas: 
+    "cab cab cab cab cab"
+    "menu . main main main"
+    "menu pie pie pie pie";
+  margin: 20px auto;
+  width: 80%;
+}
+form{
+  grid-template-columns: auto;
+  grid-template-rows: repeat(7,auto);
+  grid-template-areas:"nombre"
+                      "inputNombre"
+                      "Telf"
+                      "inputTelf"
+                      "email"
+                      "inputEmail"
+                      "cursos"
+                      "textarea"
+                      "inputTextarea"
+                      "select"
+                      "submit";
+  gap: .5rem; 
+}
+
+.name{grid-area: nombre;}
+.inputNombre{grid-area: inputNombre;}
+.Telf{grid-area: Telef;}
+.inputTelef{grid-area: inputTelef;}
+.email{grid-area: email;}
+.inputEmail{grid-area: inputEmail;}
+.cursos{grid-area: cursos;}
+.textarea{grid-area: textarea;}
+.inputTextarea{grid-area: inputTextarea; padding: 3rem;}
+.select{grid-area: select;}
+.submit{grid-area: submit;}
+
+
+
+
+
+
+
