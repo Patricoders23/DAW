@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Flores a domicilio" />
+    <meta name="keywords" content="floristeria, flores, domicilio, rosas" />
+    <link rel="stylesheet" href="estilo/style.css" />
+    <!-- Alegreya -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Pacifico tipo de letra  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <title>Flores a domicilio</title>
+
+  <body>
+    <header>
+      <h1>Flores a domicilio</h1>
+    </header>
+
+    <section>
+      <figure>
+        <img
+          src="img/rosas_rojas.jpg"
+          alt="flores rojas"
+          name="flores"
+          id="flores"
+        />
+        <figcaption>
+          <h2>Tu pedido</h2>
+          <p>Todas nuestas flores son confeccionadas en el día de la entrega</p>
+          <p>
+            Envio de flores a cualquier punto de la península: ramos de flores,
+            rosas, cestas y centro de flores y plantas
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+            velit expedita ratione blanditiis voluptatum odio? Harum tempore
+            ipsam cum nobis, incidunt qui autem dolores repellendus dignissimos
+            exercitationem? Nulla, eum velit?
+          </p>
+        </figcaption>
+      </figure>
+
+      <!-- Formulario -->
+      <form action="#" method="post">
+        <fieldset id="ramo">
+          <legend>Ramo</legend>
+
+          <div class="uno">
+            <div><input type="radio" name="ramo" checked /> Rosas rojas</div>
+            <div><input type="radio" name="ramo" /> Rosas rosas</div>
+            <div><input type="radio" name="ramo" /> Rosas amarillas</div>
+            <div><input type="radio" name="ramo" /> Rosas blancas</div>
+            <div><input type="radio" name="ramo" /> Rosas multicolor</div>
+          </div>
+
+          <label
+            >Elige el color de la tarjeta y los complementos que deseas
+            adquirir</label
+          >
+          <div class="dos">
+            <div>
+              <input type="color" name="color" id="color" />
+            </div>
+            <div>
+              <input type="checkbox" name="mensaje" id="mensaje" checked />
+              Tarjeta
+            </div>
+            <div>
+              <input type="checkbox" name="jarron" id="jarron" /> Jarrón
+            </div>
+            <div><input type="checkbox" name="cesta" id="cesta" /> Cesta</div>
+          </div>
+          <label for="dedicatoria">Escribe tu dedicatoria: </label>
+          <textarea
+            name="dedicatoria"
+            id="dedicatoria"
+            cols="62"
+            rows="5"
+            maxlength="250"
+          ></textarea>
+          <p>(Max. 250 caracteres)</p>
+        </fieldset>
+
+        <fieldset id="datos">
+          <legend>Tus datos</legend>
+          <label for="nombre">Nombre: <span>*</span></label>
+          <input type="text" name="nombre" id="nombre" size="50" required />
+          <label for="apellidos"
+            >Apellidos: <span>*</span>
+            <input
+              type="text"
+              name="apellidos"
+              id="apellidos"
+              size="50"
+              required
+            />
+          </label>
+          <div>
+            <label for="telefono"
+              >Teléfono: <span>*</span>
+              <input
+                type="tel"
+                name="telefono"
+                id="telefono"
+                pattern="[0-9]{9}"
+                required
+              />
+            </label>
+            <label for="email"
+              >Email:
+              <input
+                type="email"
+                name="email"
+                id="email"
+                size="30"
+                placeholder="ej: nombre@tuemail.com"
+              />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset id="entrega">
+          <legend>Entregar a</legend>
+          <label for="nombreb">Nombre: <span>*</span></label>
+          <input type="text" name="nombreb" id="nombreb" size="40" required />
+          <label for="apellidosb">Apellidos: <span>*</span></label>
+          <input type="text" name="apellidosb" id="apellidosb" size="40" required />
+
+          <div>
+            <label for="direccion"
+              >Dirección de envío: <span>*</span>
+              <input
+                type="text"
+                name="direccion"
+                id="direccion"
+                size="40"
+                required
+              />
+            </label>
+
+            <label for="postal"
+              >Código postal: <span>*</span>
+              <input
+                type="text"
+                name="postal"
+                id="postal"
+                size="10"
+                pattern="[0-9]{5}"
+                required
+              />
+            </label>
+
+            <label for="poblacion"
+              >Población: <span>*</span>
+              <input type="text" name="poblacion"id="poblacion" size="20"
+                required
+              />
+            </label>
+
+            <label for="provincia"
+              >Provincia: <span>*</span>
+              <input
+                type="text"
+                name="provincia"
+                id="provincia"
+                size="20"
+                required
+              />
+            </label>
+
+            <label for="fecha" class="tres" >Fecha de entrega: <span>*</span>
+              <input type="date" name="fecha" id="fecha" required />
+            </label>
+
+            <label for="horario" class="cuatro">Horario de entrega: <span>*</span>
+              <select name="horario" id="horario">
+                <option value="mañana">Mañana</option>
+                <option value="tarde">Tarde</option>
+              </select>
+            </label>
+          </div>
+
+        </fieldset>
+        <fieldset id="pago">
+          <legend>Pago</legend>
+          <div class="fin">
+            <label>Elige la forma de pago: </label>
+            <input type="radio" name="pagar" value="paypal" /> Paypal
+            <input type="radio" name="pagar" value="tarjeta" checked /> Tarjeta
+          </div>
+        </fieldset>
+
+        <div class="botones">
+          <input type="submit" value="Enviar" />
+          <input type="reset" value="Borrar" />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
