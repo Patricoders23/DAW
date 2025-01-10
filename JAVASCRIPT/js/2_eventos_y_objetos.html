@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ejemplo introducir texto , en un id, con fucion predeterminada date() -->
+    <button type="button" onclick="document.getElementById('demo2').innerHTML=Date()">Pulsa para saber fecha y hora</button>
+    <p id="demo2"></p>
+
+
+     <!-- Ejemplo modificar un texto por otro, en un id,con fucion predeterminada date() -->
+    <button type="button" onclick="document.getElementById('demo').innerHTML=Date()">ACTUALIZA LA fecha y hora</button>
+    <p id="demo">1 DE MARZO DEL 2024</p>
+   
+
+    <!-- Ejemplo introducir  un texto sin ninguna funcion, en un id -->
+    <button type="button" onclick="document.getElementById('nombre').innerHTML='Sandra'">Como se llama el desarrallador</button>
+    <h1 id="nombre"></h1>
+
+
+    <!-- Ejemplo apuntar a un imagen para modificarla mediante un evento en botón-->
+     <img src="imagenes/bombilla_apagada.gif" alt="bombilla apagada" id="mi_imag">
+    <button type="button" onclick="document.getElementById('mi_imag').src='imagenes/b_encendida.gif'">enciende</button>
+    <button type="button" onclick="document.getElementById('mi_imag').src='imagenes/bombilla_apagada.gif'">apaga</button>
+
+<div>
+    <img src="imagenes/descarga.jpg" alt="bombilla apagada" id="leonardo">
+    <button type="button" onclick="document.getElementById('leonardo').src='imagenes/descarga.jpg'">1998</button>
+    <button type="button" onclick="document.getElementById('leonardo').src='imagenes/Leonardo_Dicaprio_Cannes_2019.jpg'">2019</button>
+    <p id="datos"></p>
+    <button type="button" onclick="document.getElementById('textleonardo').innerHTML='LeonardoDicaprio 20 años'">edad en 1998</button>
+    
+    <button type="button" onclick="document.getElementById('textleonardo').innerHTML='LeonardoDicaprio 40 años'">edad en 2019</button>
+    <p id="textleonardo">edad en 1998 </p>
+</div>
+</body>
+</html>>

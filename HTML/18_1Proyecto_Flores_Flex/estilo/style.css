@@ -80,7 +80,8 @@ legend{
 }
 .uno{
   padding: 10px;
-  display: flex;
+  /* Display flex explicar  */
+  display: flex; 
   flex-wrap: wrap;
   height: 60px;
 }

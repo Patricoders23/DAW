@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Cursos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Contenedor del Formulario -->
+    <section class="formulario-container">
+      <h1>Formulario de Cursos</h1>
+      <form id="form-cursos">
+         <!-- Campo Nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required aria-label="Nombre completo">
+        
+        <!-- Selección de Curso -->
+        <label for="tipo-curso">Tipo de Curso:</label>
+        <select id="tipo-curso" name="tipo-curso" required aria-label="Selecciona el tipo de curso">
+          <option value="python">Python</option>
+          <option value="javascript">JavaScript</option>
+          <option value="java">Java</option>
+        </select>
+  
+        <!-- Campo Cantidad -->
+        <label for="cantidad">Cantidad de clases:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" required aria-label="Cantidad de clases">
+  
+        <!-- Botón de Envío -->
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  
+    <!-- Contenedor de la Imagen -->
+    <section class="imagen-container">
+      <h2>Interactividad</h2>
+      <img id="imagen-interactiva" src="img/curso1.jpg" alt="Imagen de curso interactivo">
+      <p id="datos-usuario">Haz clic en la imagen para interactuar</p>
+    </section>
+  
+    <!-- JavaScript  -->
+    <script>
+      // Selección de elementos
+      const imagenInteractiva = document.getElementById('imagen-interactiva');
+      const datosUsuario = document.getElementById('datos-usuario');
+  
+      // Evento al hacer clic en la imagen
+      imagenInteractiva.addEventListener('click', () => {
+        // Variables temporales para almacenar los datos del usuario
+        let nombre = prompt("¿Cuál es tu nombre?");
+        let curso = prompt("¿Qué curso te gustaría realizar?");
+        let telefono = prompt("¿Cuál es tu teléfono?");
+        
+        if (nombre && curso && telefono) {
+          datosUsuario.textContent = `Nombre: ${nombre}, Curso: ${curso}, Teléfono: ${telefono}`;
+        } else {
+          datosUsuario.textContent = "No proporcionaste toda la información.";
+        }
+      });
+
+      // Manejo del formulario
+      const formulario = document.getElementById('form-cursos');
+      formulario.addEventListener('submit', (event) => {
+        event.preventDefault(); // Evita la recarga de la página
+        alert('Formulario enviado correctamente');
+      });
+    </script>
+</body>
+</html>
