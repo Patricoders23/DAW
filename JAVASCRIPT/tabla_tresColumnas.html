@@ -43,18 +43,20 @@
 
 <!-- Javascript  -->
 <script>
-    let 
-    function mostrarLetra(datos){
-        if (datos=="boton1"){
-            document.getElementById("apellido").innerHTML="Nombre";
-            document.getElementById("boton1").style.display="none";
-        }else if(datos=="boton2"){
-            document.getElementById("curso").innerHTML="B";
-            document.getElementById("boton2").style.display="none";
-        }else {
-            document.getElementById("telefono").innerHTML="C";
-            document.getElementById("boton3").style.display="none";
-        }
+    function apellido(){
+        let ap=prompt("Ingresa el apellido");
+        document.getElementById("apellido").innerHTML=ap;
+        document.getElementById("boton1").style.display="none";
+    }
+    function curso(){
+        let cu=prompt("Ingresa el curso");
+        document.getElementById("curso").innerHTML=cu;
+        document.getElementById("boton2").style.display="none";
+    }
+    function telefono(){
+        let te=prompt("Ingresa el teléfono");
+        document.getElementById("telefono").innerHTML=te;
+        document.getElementById("boton3").style.display="none";
     }
 </script> 
 
@@ -74,7 +76,7 @@
                 
                 <td>
                     <p id="apellido"></p>
-                    <button id="boton1" onclick="mostrarLetra(this.id)">Apellidos</button>
+                    <button id="boton1" onclick="apellido()">Apellidos</button>
                 </td>
                 
                 <td>
