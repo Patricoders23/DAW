@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla</title>
+
+    <!-- El estilo  -->
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    main{
+        margin: auto;
+    }
+
+    table{
+        height: 200px;
+        width: 400px;
+        border: rgb(62, 70, 227) 1px double;
+        background-color: rgb(222, 220, 188);
+    }
+    td{ 
+        border: rgb(67, 32, 226) 1px double;
+        height: 50%;
+        width: 50%;
+        text-align: center;
+    }
+  
+    button{
+        text-align: center;
+    }
+    p{
+        font-size: 35px;
+        text-align: center;
+    }
+
+
+    
+</style>
+
+<!-- Javascript  -->
+<script>
+    let 
+    function mostrarLetra(datos){
+        if (datos=="boton1"){
+            document.getElementById("apellido").innerHTML="Nombre";
+            document.getElementById("boton1").style.display="none";
+        }else if(datos=="boton2"){
+            document.getElementById("curso").innerHTML="B";
+            document.getElementById("boton2").style.display="none";
+        }else {
+            document.getElementById("telefono").innerHTML="C";
+            document.getElementById("boton3").style.display="none";
+        }
+    }
+</script> 
+
+
+</head>
+<body>
+    <main>
+
+        <table>
+            <tr>
+                <td>Apellidos</td>
+                <td>Curso</td>
+                <td>Teléfono</td>
+            </tr>
+
+            <tr>
+                
+                <td>
+                    <p id="apellido"></p>
+                    <button id="boton1" onclick="mostrarLetra(this.id)">Apellidos</button>
+                </td>
+                
+                <td>
+                    <p id="curso"></p>
+                    <button id="boton2" onclick="mostrarLetra(this.id)">Curso</button>
+                </td>
+                
+                <td>
+                    <p id="telefono"></p>
+                    <button id="boton3" onclick="mostrarLetra(this.id)">Teléfono</button>
+                </td>
+                
+            </tr>
+
+        </table>
+
+    </main>
+    
+</body>
+</html>

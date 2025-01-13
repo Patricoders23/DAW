@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+        let = resultado;
+    
+        function sumar(n1, n2){
+            resultado=parseFloat(n1)+parseFloat(n2);
+            alert("La suma es: " + resultado) 
+        }
+        function restar(n1, n2){
+            resultado=parseFloat(n1)-parseFloat(n2);
+            alert("La resta es: " + resultado)
+        }
+        function multiplicar(n1, n2){
+            resultado=parseFloat(n1)*parseFloat(n2);
+            alert("La multiplicación es: " + resultado)
+        }
+        function dividir(n1, n2){
+            if (parseFloat(n2) == 0) {
+                alert("No se puede dividir entre cero");
+            } else { 
+            resultado=parseFloat(n1)/parseFloat(n2);
+            alert("La división es: " + resultado)
+            }
+        }
+        
+    </script>
+
+
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <form action="">
+        <label>Escribe un número</label>
+        <input type="number" name="numero1">
+        <label>Escribe un segundo número</label>
+        <input type="number" name="numero2">
+        <input type="button" class="bloque" value="sumar" onclick="sumar(numero1.value, numero2.value)">
+        <input type="button" class="bloque" value="restar" onclick="restar(numero1.value, numero2.value)">
+        <input type="button" class="bloque" value="multiplicar" onclick="multiplicar(numero1.value, numero2.value)">
+        <input type="button" class="bloque" value="dividir" onclick="dividir(numero1.value, numero2.value)">
+
+    </form>
+
+<hr>
+<p id="demo">Clases de Javascript, insertar texto</p>
+<script>
+    let text="Texto con comillas dobles";
+    document.getElementById("demo").innerHTML = text;
+</script>
+
+<hr>
+<p id="demo1">Clases de Javascript, insertar texto con comillas simples y dobles</p>
+<script>
+    let carName1="Volvo`s 'XC60'";
+    let carName2='Volvo XC60';
+    document.getElementById("demo1").innerHTML = carName1 + " " + carName2;
+</script>
+
+<hr>
+<p id="demo2">Encontrar la 
+    
+    
+    longitud de una cadena</p>
+<script>
+    let longitud="Volvo`s 'XC60' modelo 2000";
+    document.getElementById("demo2").innerHTML = "La longitud del texto: " + longitud  + ", es: " + longitud.length;
+</script>
+    
+</body>
+</html>

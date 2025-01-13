@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla</title>
+
+    <!-- El estilo  -->
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    main{
+        margin: auto;
+    }
+
+    table{
+        height: 200px;
+        width: 200px;
+        border: red 1px double;
+        background-color: rgb(236, 221, 21);
+
+    }
+    td{ 
+        border: red 1px double;
+        height: 50%;
+        width: 50%;
+        text-align: center;
+    }
+  
+    button{
+        text-align: center;
+    }
+    p{
+        font-size: 75px;
+        text-align: center;
+    }
+
+
+    
+</style>
+
+<!-- Javascript  -->
+<script>
+    function mostrarLetra(b_id){
+        if (b_id=="boton1"){
+            document.getElementById("ba").innerHTML="A";
+            document.getElementById("boton1").style.display="none";
+        }else if(b_id=="boton2"){
+            document.getElementById("bb").innerHTML="B";
+            document.getElementById("boton2").style.display="none";
+        }else if (b_id=="boton3"){
+            document.getElementById("bc").innerHTML="C";
+            document.getElementById("boton3").style.display="none";
+        }else{
+            document.getElementById("bd").innerHTML="D";
+            document.getElementById("boton4").style.display="none";
+        }
+    }
+</script>
+
+
+</head>
+<body>
+    <main>
+
+        <table>
+
+            <tr>
+                
+                <td>
+                    <p id="ba"></p>
+                    <button id="boton1" onclick="mostrarLetra(this.id)">c 11</button>
+                </td>
+                
+                <td>
+                    <p id="bb"></p>
+                    <button id="boton2" onclick="mostrarLetra(this.id)">c 12</button>
+                </td>
+            </tr>
+
+            <tr>
+                
+                <td>
+                    <p id="bc"></p>
+                    <button id="boton3" onclick="mostrarLetra(this.id)">c 13</button>
+                </td>
+                
+                <td>
+                    <p id="bd"></p>
+                    <button id="boton4" onclick="mostrarLetra(this.id)">c 14</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </main>
+    
+</body>
+</html>
