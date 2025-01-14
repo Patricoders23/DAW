@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar DNI con validaciones adicionales</title>
+    <script>
+        function validarDni() {
+
+            let dni=prompt("Ingrese su dni: (8 números + 1 letra)");
+            let patron=/^[0-9]{8}[A-Za-z]{1}$/;
+
+            if(patron.test(dni)){
+                let numero=parseInt(dni.slice(0,8));
+                let letraIngresada=dni.slice(-1).toUpperCase();
+
+                let letras="TRWAGMYFPDXBNJZSQVHLCKE";
+                let letraCorrecta = letras[numero % 23]; //Calcular la letra correcta
+
+                if (letraIngresada == letraCorrecta) {
+                    alert("DNI válido y la letra es correcta.");
+                }else {
+                    alert(`DNI inválido: la letra no coincide. Debería ser  "${letraCorrecta}".`);
+                }
+
+            }else {
+                alert("DNI incorrecto, no cumple con el formato de 8 números y 1 letra.");
+            }
+            
+        }
+    </script>
+
+
+</head>
+<body>
+    <h1>Validar DNI</h1>
+    <p>Validar DNI con 8 números y 1 letra, comprobando la correcpondencia de la letra</p>
+    <button onclick="validarDni()">Validar DNI</button>
+    
+</body>
+</html>

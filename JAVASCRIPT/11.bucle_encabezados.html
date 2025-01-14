@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas con for</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+    </style>
+
+    <script>
+        // Creo un array de notas
+        let notas = new Array(4);
+        notas[0] = prompt("Nota Manuel");
+        notas[1] = prompt("Nota Mary");
+        notas[2] = prompt("Nota Jen");
+        notas[3] = prompt("Nota Kit");
+
+        // Creo un array con los nombres de los estudiantes
+        let alumnos = ["Manuel", "Mary", "Jen", "Kit"];
+
+        // Creo un string para los resultados
+        let resultado = "";
+
+        // Con for recorro las notas y concateno en la variable resultado
+        for (let i = 0; i < notas.length; i++) {
+            resultado += alumnos[i] + ": " + notas[i] + "<br>";
+        }
+
+        // Asigno los resultados al contenido de la celda
+        let celda = document.getElementById("x");
+        celda.innerHTML = resultado;
+
+    </script>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th>ALUMNOS</th>
+            <th>NOTAS</th>
+        </tr>
+        <tr>
+            <td>Manuel <br>Mary <br>Jen <br>Kit</td>
+            <td id="x"></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
