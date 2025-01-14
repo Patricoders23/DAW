@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Teléfono</title>
+
+    <script>
+        function validarTelefono(){
+            let tel=prompt("Insertar número de teléfono que empiece con 3 o 4 y tenga 6 digitos");
+            let patron=/^[3-4]{1}[0-9]{6}$/;
+            if (patron.test(tel)==true){
+                alert("Número de teléfono correcto")
+            } else 
+                alert("Número de teléfono incorrecto, inténtelo otra vez!")
+        }
+    </script>
+
+
+</head>
+<body>
+    <h1>Validar número de teléfono</h1>
+    <p>Número de teléfono que empiece con 3 o 4 y tenga 6 digitos</p>
+    <button onclick="validarTelefono()">Validar Teléfono</button>
+
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url('../img/calculadoraFondo.jpg') no-repeat fixed;
+    background-size: cover;    
+}
+
+form{
+    margin:0 auto;
+    margin-top: 100px;
+    background-color:lightgray;
+    height: 120px;
+    width:35%;
+    padding:10px;
+    box-shadow: 6px 6px 2px 1px rgba(128, 128, 128, .7);
+}
+.bloque{
+    display: block;   
+}
+.sumar{
+    background-color: green;
+}
+.restar{
+    background-color: red;
+}
+.dividir{
+    background-color: orange;
+}
+.multiplicar{
+    background-color: blue;
+}
+
+.sumar, .restar, .multiplicar, .dividir{
+    padding:1px;
+    margin-top:5px;
+    color:white;
+}

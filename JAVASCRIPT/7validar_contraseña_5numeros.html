@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar contraseña</title>
+
+    <script>
+        function validarContrasena() {
+            let contrasena = prompt('Introduce una contraseña de 5 números o dígitos: ');
+            let patron = /^[0-9 a-z A-Z]{5}$/;
+            if (patron.test(contrasena) == true) {
+                alert("Contraseña correcta!!")
+            } else{
+                alert("Contraseña incorrecta, son solo 5 digitos o caracteres!")
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+
+    <h1>Validador de Contraseñas</h1>
+    <p>Haz clic en el boton para validar contraseña.</p>
+    <button onclick="validarContrasena()">Validar Contraseña</button>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="author" content="Ignacio Basso"> -->
+    <link rel="stylesheet" href="./styles.css">
+    <title>Incentivo Navidad</title>
+    <script src="./incentivo-navidad.js" ></script>
+  </head>
+  <body class="justify-center align-center">
+    <h1>Verifica tu Incentivo de Navidad</h1>
+    <form id="formLogin" class="grid grid-cols-2 gap-2 p-4">
+      <label>Nombre</label>
+      <input id="inpName" type="text" name="nombre" class="px-2" required />
+      <label>Antigüedad en años</label>
+      <input id="inpAntiquity" type="number" name="anti" value="0" min="0" class="px-2" required />
+      <input type="submit" value="mi incentivo es" class="col-span-2 py-2 rounded" />
+    </form>
+    <div class="text-center">
+      <h2>¿Te motivan los incentivos?</h2>
+      <p id="pIncentivo"></p>
+    </div>
+  </body>
+</html>

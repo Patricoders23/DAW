@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar DNI español</title>
+
+    <script>
+        function validarDni( ) {
+            let dni=prompt("Introduce tu DNI, 8 números y 1 letra");
+            let patron = /^[0-9]{7}[A-Za-z]{1}$/;
+            if (patron.test(dni)==true){
+                alert("DNI corrrecto")
+            } else 
+                alert("DNI incorrecto, inténtelo otra vez!")
+
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Validar DNI</h1>
+    <p>Validar DNI con 8 números y 1 letra</p>
+    <button onclick="validarDni()">Validar DNI</button>
+    
+</body>
+</html>
