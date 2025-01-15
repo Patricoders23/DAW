@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de días y edad</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+
+    <label for="diaSemana">¿Qué día de la semana vendrás?</label><br>
+    <select name="diaSemana" id="diaSemana">
+        <option value="LUNES">LUNES</option>
+        <option value="MARTES">MARTES</option>
+        <option value="MIERCOLES">MIÉRCOLES</option>
+        <option value="JUEVES">JUEVES</option>
+        <option value="VIERNES">VIERNES</option>
+        <option value="SÁBADO">SÁBADO</option>
+        <option value="DOMINGO">DOMINGO</option>
+    </select><br><br>
+
+    <label for="age">¿Cuántos años tienes?</label><br>
+    <input type="number" id="age" name="age" placeholder="Introduce tu edad"><br><br>
+
+    <!-- Botón para enviar -->
+    <button type="button" onclick="submitForm()">Aceptar</button>
+
+    <!-- Elemento para mostrar el mensaje de salida -->
+    <p id="output"></p>
+
+    <script src="dias_edad.js"></script>
+</body>
+</html>
