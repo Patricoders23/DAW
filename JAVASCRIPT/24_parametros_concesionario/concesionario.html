@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Formulario Concesionario</title>
+
+</head>
+<body>
+    <!-- Contenido principal de la página -->
+    <h1>Formulario de Concesionario</h1>
+  
+    <form id="carForm">
+        <!-- Formulario con el identificador 'carForm' -->
+
+        <!-- Selección de modelo del coche -->
+        <label for="carModel">¿Qué modelo de coche quieres?</label><br>
+        <!-- Etiqueta descriptiva vinculada al campo desplegable a través del atributo 'for' -->
+        <select name="carModel" id="carModel">
+            <!-- Lista desplegable para seleccionar un modelo de coche -->
+            <option value="Lexus 8">Lexus 8</option>
+            <!-- Cada opción representa un modelo de coche con su valor correspondiente -->
+            <option value="Toyota Corolla">Toyota Corolla</option>
+            <option value="Ford Focus">Ford Focus</option>
+            <option value="Tesla Model 3">Tesla Model 3</option>
+        </select><br><br>
+        <!-- Salto de línea para espaciar los elementos -->
+
+        <!-- Selección del color del coche -->
+        <label for="carColor">¿Qué color de coche quiere?</label><br>
+        <!-- Etiqueta descriptiva vinculada a los botones de selección por el atributo 'for' -->
+        
+        <!-- Botones de selección para elegir el color del coche -->
+        <input type="radio" id="verde" name="carColor" value="Verde">
+        <label for="verde">Verde</label>
+        <!-- Cada botón tiene un identificador único y comparte el atributo 'name' para agruparlos -->
+        <input type="radio" id="azul" name="carColor" value="Azul">
+        <label for="azul">Azul</label>
+        <input type="radio" id="gris" name="carColor" value="Gris">
+        <label for="gris">Gris</label>
+        <input type="radio" id="blanco" name="carColor" value="Blanco">
+        <label for="blanco">Blanco</label>
+        <!-- Las etiquetas 'label' describen cada botón de selección -->
+
+        <!-- Selección de la fecha de entrega -->
+        <label for="deliveryDate">Fecha de Entrega:</label><br>
+        <!-- Etiqueta descriptiva vinculada al selector de fecha -->
+        <input type="date" id="deliveryDate" name="deliveryDate"><br><br>
+        <!-- Campo para seleccionar una fecha -->
+
+        <!-- Botón para enviar el formulario -->
+        <button type="button" onclick="submitForm()">Aceptar</button>
+        <!-- Botón que ejecuta la función 'submitForm' cuando se hace clic -->
+    </form>
+
+    <!-- Elemento para mostrar el mensaje de salida -->
+    <p id="output"></p>
+    <!-- Este párrafo mostrará los datos seleccionados por el usuario -->
+
+    <script src="concesionario.js"></script>
+    <!-- Archivo de JavaScript externo que contiene la lógica del formulario -->
+</body>
+</html>
