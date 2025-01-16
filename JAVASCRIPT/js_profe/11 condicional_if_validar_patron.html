@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+   <title>Patrón</title>
+   <meta charset="UTF-8">
+</head>
+<body>
+<script>
+   let tel = prompt("Introduce telefono movil");
+   let patron = /^[67]{1}[0-9]{8}$/;
+   if ( patron.test(tel)==true)
+      alert ("N�mero correcto");      
+   else
+	  alert ("N�mero incorrecto");      
+</script> 
+</body>
+</html>
+
+
+<!--verificacion de que se cumplen luna serie de requisitos definidos: probocar el arroba en un email...numeros de telefono
+
+EJEMPLO: SE solicita que el ususario introduzca un texto y se verifica 
+La expresion regula se define en la variable patr�n. A una variable de este tipo se le puede aplicar el m�todo test(cadena) de la forma mostrada, y validara si la cadena cumple los criterios del patron o no, devolviendo tru o fulse respectivamente.
+**la expresion va delimitada por la barra /
+** ^indica el principio y $ el final de expresion
+** Los caracteres constanes que deban aparecen se indican directamente , salvo que tenga un significado especial  en las expesiones regulares como por ejemplo un corchete, **interrogacion, punto....En etos casos ir�n precedidos de la barra invertida\<br>
+Entre corchetes, elementos validos en una determinada posicion de la expresion regular, empleando el guion para establecer rangos. Ej[agf] indicar�a que pueden ir cualquiera de esas tes letras [a-f] que puede ir cualquiera de la a a la f
+**el simbolo ^ en el corchete indica negacion es decir los elementos contrarios. Por lo que ^indica que der�a cualquier elemento salvo esas tres letras
+** +el elemento anteior se repite una o mas veces
+** *el elemento anterior se repite cero o mas veces
+** ? el elemento anterior se repite una o cer veces
+** {x} El elemento anterior se repite x veces
+**
+

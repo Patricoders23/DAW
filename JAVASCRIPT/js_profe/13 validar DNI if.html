@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+
+<script>
+	function caracteres(d){
+	var patron =/^[0-9]{8}[A-Z,a-z]{1}$/;
+	
+		
+		if(patron.test(d)==true){
+			alert("formato de DNI correcto");
+		}else{
+			alert("Formato de DNI incorrecto");
+		}
+	}
+</script>
+</head>
+
+<body>
+	<form action="">
+		<label for="dni">Añade tu dni </label>
+		<input type="text" name="dni" placeholder="En el formato correcto.Ejem:text'12345678A'" >
+		<input type="button" value="ok" onclick="caracteres(dni.value)">
+		
+
+	</form>
+</body>
+</html>

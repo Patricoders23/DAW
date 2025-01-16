@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+	table,td,th{
+		border:  1px solid;
+	}
+	table{
+		width: 600px;
+	}
+	
+</style>
+</head>
+
+<body>
+
+<table>
+	
+<tr>
+<th>ALUMNOS</th>	
+<th>NOTAS</th>	
+</tr>
+<tr>
+<th>Manuel<br>Eva<br>Mar<br>Kristian</th>	
+<th id="x"></th>
+</tr>
+</table>
+
+<script>
+
+var nombres = ["Manuel", "Eva", "Mar", "Kristian"]
+var notas = [];
+var celda = document.getElementById("x");
+
+	for(var i = 0; i <= 3; i++){
+		notas[i] = parseInt(prompt("Introduce la nota "+nombres[i], 0));
+		//notas.push(parseInt(prompt("Introduce la nota de "+nombres[i], 0)));
+		celda.innerHTML += notas[i]+'<br>';
+	}
+	
+console.log(notas);
+</script>
+</body>
+</html>

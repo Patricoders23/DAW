@@ -1,0 +1,28 @@
+<!DOCTYPE html">
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+<!--igual que con las variables simples, podemos realizar operaciones sobre los valores en un array y almacenar el resultado -->
+<!--En este ejemplo demostramos como modificar el valor de un array, y tamien cómo concatenar texto. <br />
+el array funciona exactamente igual que las variables individuales, con la diferencia de que hay que mencionar el indice cada vez que dessee utilizarlas -->
+<script>
+  let myarray = ["red", 32 , 4];
+
+  myarray[0] = myarray[0] + " color";
+   alert(myarray[0]); 
+  <!--la declaracion siguiente indica al interprete de JS que tome el valor actual de mimatriz para el indice 1, sume 10 a ese valor y almacene el resultado en lel mismo array y en el mismo indice (asi será 42) -->  
+  myarray[1] = myarray[1] + 10;
+  
+  
+<!--la declaracion siguiente el operador + funciona para texto. Genera una nueva cadena de texto que incluye ambos valores......En el ejemplo el valor de mimatriz era rojo, pero más tarde se le añadió el texto color al comienzo de la cadena; por lo tanto ahora el valor de mimatriz en el indice o es "color rojo" ++++RESULTADO:red color 42-->  
+  alert(myarray[0] + " " + myarray[1]);
+</script>
+
+
+<!--El úlitmo alert muestra ambos valores de la matriz separados por un espacio. Los valores y el espacio están unidos por el operador + que en este caso se utiliza para concatenar valores y cadenas  -->
+</body>

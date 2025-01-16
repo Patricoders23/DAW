@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de JavaScript onMouseOver y onMouseOut con Imágenes</title>
+
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+            display: block;
+            margin: 20px;
+            border: 2px solid;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Enlaces para cambiar las imagenes  -->
+    <a href="#" onmouseover="cambiarImagen('img/g.jpg')" onmouseout="cambiarImagen('img/g1.jpg')">Gato 1</a>
+    <a href="#" onmouseover="cambiarImagen('img/g1.jpg')" onmouseout="cambiarImagen('img/g.jpg')">Gato 2</a>
+
+    <img id="imagen" src="img/g1.jpg" alt="Imagen interactiva">
+
+    <script>
+        function cambiarImagen(ruta){
+            document.getElementById('imagen').src = ruta;
+        }
+    </script>
+
+</body>
+</html>

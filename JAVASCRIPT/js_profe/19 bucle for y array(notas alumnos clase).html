@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Documento sin título</title>
+	<style>
+		table,
+		td,
+		th {
+			border: 1px solid;
+		}
+
+		table {
+			width: 600px;
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+	<table>
+
+		<tr>
+			<th>ALUMNOS</th>
+			<th>NOTAS</th>
+		</tr>
+		<tr>
+			<td>Manuel<br>Mar<br>Eva<br>Paloma</td>
+			<td id="x"></td>
+		</tr>
+	</table>
+
+	<script>
+		let notas = new Array(4);
+		notas[0] = prompt("Nota Manuel");
+		notas[1] = prompt("Nota Mar");
+		notas[2] = prompt("Nota Eva");
+		notas[3] = prompt("Nota Paloma");
+
+		let i;
+		let resultado = [];
+
+		let celda = document.getElementById("x");
+		for (i = 0; i < notas.length; i++) {
+
+			resultado = notas[i];
+			celda.innerHTML += resultado + "<br>";//ojo!! si no pones el += y solo pones = ,nos saca solo el último elemento del array
+		}
+	</script>
+
+
+
+
+</body>
+
+</html>

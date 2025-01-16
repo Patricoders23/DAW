@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+function funcionNumero() {
+    let contenido; 
+	let	texto;
+
+
+   contenido=document.getElementById("numero").value;
+
+
+    if (isNaN(contenido) || contenido < 1 || contenido > 10) {
+        texto = "NO! un número del 1 al 10";
+    } else {
+        texto = "número  OK";
+    }
+    document.getElementById("aqui_escribe").innerHTML = texto;
+}
+</script>
+</head>
+
+<body><p>Escribe un número del 1 al 10</p>
+
+<input id="numero">
+
+<button type="button" onclick="funcionNumero()">envia</button>
+
+<p id="aqui_escribe"></p>
+
+
+
+</body>
+</html>

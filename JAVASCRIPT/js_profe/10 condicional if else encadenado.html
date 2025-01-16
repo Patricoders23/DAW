@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script type="text/javascript">
+
+function incentivo(n,t){
+	if(t<=3){
+		alert(n + " eres un empleado nuevo, Tienes un jamón por Navidad!!!");
+	}
+	else if(t>=10){
+			alert(n + " eres un empleado de honor, Tienes un viaje a New York por Navidad!!");
+	}
+	else{alert(n + " eres une empleado normal, Tienes una cesta de productos ibéricos por Navidad ");
+		}
+	}
+
+	
+
+</script>
+</head>
+
+<body>
+<form>
+<label for="nombre">Escribe tu nombre</label>
+	<input type="text" name="nombre" placeholder="Tu nombre es..">
+<label for="tiempo">Cuanto tiempo llevas en la empresa</label>
+	<input type="number" name="tiempo">
+	<input type="button" name="boton" value="pulsa" onClick="incentivo(nombre.value,tiempo.value)">
+</form>
+</body>
+</html>

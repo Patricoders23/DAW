@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CONCESIONARIO</title>
+</head>
+<script>
+function Mensaje( fecha, modelo, color){
+alert('El día '+fecha + ' tendras tu modelo ' + modelo + ' y de color ' + color);}
+	</script>
+<body>
+<form>
+¿Que Modelo de Coche quieres?<p>
+<select name="modelo">
+<option>Citroen C5</option>
+<option>Alpha Romeo</option>
+<option>Lexus 8</option>
+<option>Mini couper</option>
+</select>
+<p>
+¿Que Color de Coche quiere?
+<p>
+<input type="radio" name="color" value="verde"> Verde
+<input type="radio" name="color" value="Azul"> Azul
+<input type="radio" name="color" value="Rosa"> Rosa
+<input type="radio" name="color" value="Amarillo"> Amarillo
+<input type="radio" name="color" value="Blanco"> Blanco
+<input type="radio" name="color" value="Negro"> Negro
+<p>
+Fecha de entrega.
+<p>
+<input type="date" name="fecha">
+<p>
+<input type="button" name=" boton" value="Aceptar" size="25" onClick="Mensaje(fecha.value, modelo.value, color.value)">
+</form>
+
+</body>
+</html>

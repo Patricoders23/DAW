@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script>
+		function validar(c){
+			var patron=/^[0-9 a-z A-Z]{5}$/;
+			if(patron.test(c)==true){
+				alert("contraseña correcta!!")
+			}
+			else{
+				alert("contraseña incorrecta.Acuerdate de que solo son 5 números!!")
+					
+				};
+			
+			
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<label for="contra">Dime tu contraseña</label>
+		<input type="password" name="contra" placeholder="ojo! solo cinco numero o letras minúsculas">
+		<input type="button"  value="ok" onClick="validar(contra.value)">
+	</form>
+</body>
+
+
+</html>
+
+
+
+
