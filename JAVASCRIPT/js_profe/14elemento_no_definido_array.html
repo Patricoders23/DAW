@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Explicación sobre null y undefined -->
+<!-- Los arrays pueden contener cualquier tipo de valor, incluso "null" o "undefined". -->
+<!-- En este ejemplo, mostramos cómo manejar el caso donde un elemento del array no está definido. -->
+
+
+    <script>
+        var semana = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"];
+        alert("Día: " + semana[0]);
+
+
+  // Intentamos acceder a un elemento no definido, el segundo índice está vacío (undefined)
+  // Se puede asignar explícitamente undefined para verlo
+        semana[1] = undefined;
+        alert("Elemento no definido: " + semana[1]);
+    </script>
+    
+</body>
+</html>
