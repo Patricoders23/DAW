@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentencias if else switch</title>
+
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 20px;
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Consulta Mes y Estación del Año</h1>
+    <label for="diaMes">Introduce el número del mes (1-12):</label>
+    <input type="number" id="diaMes" placeholder="Ejemplo: 6" min="1" max="12">
+
+    <button id="verMes">Mostrar mes</button>
+    <button id="verEstacion">Mostrar Estación</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        // Obtener los elementos del DOM
+        const diaMes = document.getElementById('diaMes');
+        const verMesBtn = document.getElementById('verMes');
+        const verEstacionBtn = document.getElementById('verEstacion');
+        const resultado = document.getElementById('resultado');
+
+        // Función para mostrar el mes (usando switch)
+        verMesBtn.addEventListener('click', () => {
+            const mes = parseInt(diaMes.value); // Convertir el valor ingresado a número
+            let nombreMes = "";
+
+            switch (mes) {
+                case 1: nombreMes = "Enero"; break;
+                case 2: nombreMes = "Febrero"; break;
+                case 3: nombreMes = "Marzo"; break;
+                case 4: nombreMes = "Abril"; break;
+                case 5: nombreMes = "Mayo"; break;
+                case 6: nombreMes = "Junio"; break;
+                case 7: nombreMes = "Julio"; break;
+                case 8: nombreMes = "Agosto"; break;
+                case 9: nombreMes = "Septiembre"; break;
+                case 10: nombreMes = "Octubre"; break;
+                case 11: nombreMes = "Noviembre"; break;
+                case 12: nombreMes = "Diciembre"; break;
+                default: nombreMes = "Número no válido. Introduce un número entre 1 y 12.";
+            }
+
+            // Mostrar el resultado
+            resultado.innerHTML = `El mes correspondiente es: <b>${nombreMes}</b>`;
+        });
+
+        // Función para mostrar la estación del año (usando if-else)
+        verEstacionBtn.addEventListener('click', () => {
+            const mes = parseInt(diaMes.value); // Convertir el valor ingresado a número
+            let estacion = "";
+
+            if (mes === 12 || mes === 1 || mes === 2) {
+                estacion = "Invierno";
+            } else if (mes >= 3 && mes <= 5) {
+                estacion = "Primavera";
+            } else if (mes >= 6 && mes <= 8) {
+                estacion = "Verano";
+            } else if (mes >= 9 && mes <= 11) {
+                estacion = "Otoño";
+            } else {
+                estacion = "Número no válido. Introduce un número entre 1 y 12.";
+            }
+
+            // Mostrar el resultado
+            resultado.innerHTML = `La estación correspondiente es: <b>${estacion}</b>`;
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

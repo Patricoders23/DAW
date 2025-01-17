@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluquería</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td{
+            border: 1px solid;
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            background-color: rgb(250, 144, 202);
+        }
+        button{
+            margin: 10px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Peluquería</h1>
+    <p>Rellena el formulario</p>
+
+    <table>
+        <tr>
+            <th>LAVADO</th>
+            <th>CORTE</th>
+            <th>TEÑIR</th>
+            <th>MANICURA</th>
+        </tr>
+
+        <tr>
+            <td><button onclick="preguntarServicio('Lavado')">¿Quieres lavado?</button></td>
+            <td><button onclick="preguntarServicio('Corte')">¿Quieres corte?</button></td>
+            <td><button onclick="preguntarServicio('Teñir')">¿Quieres teñirte?</button></td>
+            <td>
+                <button onclick="mostrarImagen('img/pr.jpg')">Porcelana roja</button>
+                <button onclick="mostrarImagen('img/pfr.jpg')">Porc. francesa</button>
+                <button onclick="borrarResultado()">Borrar</button>
+                <br>
+                <img src="img/manicure.jpg" id="imagenManicura" alt="Manicura">
+            </td>
+        </tr>
+    </table>
+
+    <h2>Datos de Contacto</h2>
+    <form onsubmit="validarDatos(event)">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Introduce tu nombre" required><br>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" placeholder="Introduce tu teléfono"><br>
+        <button type="submit">Confirmar datos</button>
+    </form>
+
+    <!-- Botón para mostrar clientes -->
+    <button onclick="mostrarClientes()">Nuestros Clientes</button>
+
+    <div id="resultado"></div>
+    <div id="clientes"></div>
+
+    <script>
+        function preguntarServicio(servicio) {
+            const respuesta = prompt(`¿Quieres ${servicio}? (Si / No)`);
+            if (respuesta && respuesta.toLowerCase() === 'si') {
+                seleccionarServicio(servicio);
+            } else {
+                alert('Servicio no seleccionado.');
+            }
+        }
+
+        function seleccionarServicio(servicio) {
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = `Servicio seleccionado: <b>${servicio}</b>`;
+        }
+
+        function mostrarImagen(ruta) {
+            const imagen = document.getElementById('imagenManicura');
+            imagen.src = ruta;
+        }
+
+        function borrarResultado() {
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = "";
+            const imagen = document.getElementById('imagenManicura');
+            imagen.src = "";
+        }
+
+        function validarDatos(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+
+            const telefonoValido = /^6\d{8}$/;
+            if (!telefonoValido.test(telefono)) {
+                alert("El número de teléfono debe tener 9 dígitos y comenzar con un 6.");
+                return;
+            }
+
+            document.getElementById('resultado').innerHTML = `Gracias ${nombre}! Te contactaremos al ${telefono}.`;
+        }
+
+
+
+        const clientesImportantes = [
+
+            "María López",
+            "Juan Pérez",
+            "Ana García",
+            "Pedro Sánchez",
+            "Laura Martínez",
+            "Carlos Fernández",
+            "Sofía Ramírez",
+        ];
+
+        function mostrarClientes() {
+            const clientesDiv = document.getElementById('clientes');
+            clientesDiv.innerHTML ="<h3>Nuestros Clientes:</h3>";
+
+            for (let i=0; i < clientesImportantes.length; i++){
+                clientesDiv.innerHTML += `<p>${i + 1}. ${clientesImportantes[i]}</p>`;
+            }
+        }
+        
+    </script>
+   
+</body>
+</html>
