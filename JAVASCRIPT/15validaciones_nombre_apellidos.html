@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación del Formulario</title>
+
+    <script>
+        function elemObligat() {
+            let nombre = document.getElementById("n").value;
+            let apellido = document.getElementById("a").value;
+
+            if (nombre.trim() === "") {
+                alert("¡Que se te olvida!! Pon tu nombre");
+                return false;
+            }
+
+            if (apellido.trim() === "") {
+                alert("¡Que se te olvida!! Pon tu apellido");
+                return false;
+            }
+        }
+
+    </script>
+
+
+
+</head>
+<body>
+    <form action="" method="post" onsubmit="return elemObligat();">
+    <label for="n">Escribe tu nombre:</label>
+    <input type="text" name="n" id="n">
+    <br><br>
+
+    <label for="a">Escribe tu apellido:</label>
+    <input type="text" name="a" id="a" required>
+    <br><br>
+
+    <input type="submit" value="enviar">
+
+    </form>
+    
+</body>
+</html>

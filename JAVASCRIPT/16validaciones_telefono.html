@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación teléfono</title>
+
+    <script>
+        function funcionNumero() {
+            let conenido;
+            let texto;
+
+            contenido = document.getElementById('numero').value;
+            if (isNaN(contenido) || contenido < 1 || contenido > 10) {
+                texto = "¡NO!, es un número del 1 al 10";
+
+            } else {
+                texto = "¡Correcto!, tu número es " + contenido;
+            }
+            document.getElementById("aqui_escribe").innerHTML = texto;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Validación de número de teléfono</h1>
+
+    <p>Escribe el número del 1 al 10</p>
+
+
+    <input type="text" id="numero" placeholder="Escribe aqui tu número">
+    <button type="button" onclick="funcionNumero()">envia</button>
+
+    <p id="aqui_escribe"></p>
+    
+</body>
+</html>
