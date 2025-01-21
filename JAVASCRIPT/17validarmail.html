@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Formulario</title>
+
+    <script>
+        function validarFormulario(event){
+            // Evita que el formulario se envíe automáticamente
+            // asegura que el formulario no se envíe hasta que las validaciones sean correctas.
+            event.preventDefault();
+
+            let nombre = document.getElementById("nombre").value.trim();
+            let apellido = document.getElementById("apellido").value.trim();
+            let telefono = document.getElementById("telefono").value.trim();
+            let correo = document.getElementById("correo").value.trim();
+
+            if (nombre === "") {
+                alert('Por favor, escribe tu nombre.');
+                return;
+            }
+            if (apellido === ""){
+                alert('Por favor, escribe tu apellido'); 
+            }
+
+            let telefonoValido = /^[0-9]{9}$/;
+            if (!telefonoValido.test(telefono)) {
+                alert("Por favor, escribe un número de teléfono válido");
+                return;
+            }
+
+            let correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex para emails básicos
+            if (!correoValido.test(correo)){
+                alert("Por favor, escribe un correo válido");
+                return;
+            }
+
+            alert("Formulario enviado correctamente. ¡Gracias!");
+
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    <h1>Formulario de Validación</h1>
+    <form action="" onsubmit="validarFormulario(event)">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre">
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" placeholder="Escribe tu apellido">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" placeholder="Escribe tu teléfono">
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="text" id="correo" placeholder="Escribe tu correo electrónico">
+
+        <button type="submit">Enviar</button>
+
+    </form>
+    
+</body>
+</html>
