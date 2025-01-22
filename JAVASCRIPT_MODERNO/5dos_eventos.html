@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let cambiarColorTamanio = () => {
+            document.getElementById("muestra").style.fontSize="60px";
+            document.getElementById("muestra").style.color="violet";
+            document.getElementById("boton").innerHTML="Estado anterior doble click";
+        }
+
+        let estadoNormal = () => {
+            document.getElementById("muestra").style.fontSize="30px";
+            document.getElementById("muestra").style.color="blue";
+            document.getElementById("boton").innerHTML="Un click para cambiar el color y tamaño"
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+    <p id="muestra">Estoy cambiando el color y el tamaño del texto de un elemento párrafo</p>
+    <button type="button" id="boton" onclick="cambiarColorTamanio()" ondblclick="estadoNormal()">Un click para cambiar el color y el tamaño</button>
+    
+</body>
+</html>
