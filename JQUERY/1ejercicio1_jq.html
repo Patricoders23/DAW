@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 jquery</title>
+    <style>
+        div {
+            width: 500px;
+            background-color: grey;
+            color: azure;
+            padding: 20px;
+        }
+    </style>
+
+
+    <!-- Importar Prototype y Scriptaculous -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script>
+
+
+
+
+</head>
+<body>
+    <h1>EFECTOS jquery</h1>
+    <button onclick="new Effect.Fade($('test-area'))">Fundido salida</button>
+    <button onclick="new Effect.Appear($('test-area'))">Fundido entrada</button>
+    <button onclick="new Effect.SlideUp($('test-area'))">Cortinilla de subida</button>
+    <button onclick="new Effect.SlideDown($('test-area'))">Cortinilla de salida</button>
+    <button onclick="new Effect.Highlight($('test-area'))">Flash</button>
+    <button onclick="new Effect.Shake($('test-area'))">Temblor</button>
+
+    <!-- Elemento sobre el que se aplicarán los efectos -->
+    <div id="test-area">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nam neque, nulla ex, ea voluptates, itaque quidem culpa modi temporibus id! Rerum aperiam quo voluptatibus rem laboriosam? Magni, consectetur modi.
+        </p>
+    </div>
+
+    
+</body>
+</html>

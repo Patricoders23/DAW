@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Formulario</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        .success {
+            color: green;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function validarFormulario(event) {
+            // Evita que el formulario se envíe automáticamente
+            event.preventDefault();
+
+            // Limpiar mensajes previos
+            document.querySelectorAll('.error').forEach(error => error.innerText = "");
+            document.getElementById('mensaje-exito').innerText = "";
+
+            // Obtener los valores de los campos
+            let nombre = document.getElementById("nombre").value.trim();
+            let apellido = document.getElementById("apellido").value.trim();
+            let telefono = document.getElementById("telefono").value.trim();
+            let correo = document.getElementById("correo").value.trim();
+
+            let esValido = true;
+
+            // Validar nombre
+            if (nombre === "") {
+                document.getElementById("error-nombre").innerText = "Por favor, escribe tu nombre.";
+                esValido = false;
+            }
+
+            // Validar apellido
+            if (apellido === "") {
+                document.getElementById("error-apellido").innerText = "Por favor, escribe tu apellido.";
+                esValido = false;
+            }
+
+            // Validar teléfono
+            let telefonoValido = /^[0-9]{9}$/;
+            if (!telefonoValido.test(telefono)) {
+                document.getElementById("error-telefono").innerText = "Por favor, escribe un número de teléfono válido (9 dígitos).";
+                esValido = false;
+            }
+
+            // Validar correo
+            let correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!correoValido.test(correo)) {
+                document.getElementById("error-correo").innerText = "Por favor, escribe un correo válido.";
+                esValido = false;
+            }
+
+            // Si todo es válido
+            if (esValido) {
+                document.getElementById("mensaje-exito").innerText = "Formulario enviado correctamente. ¡Gracias!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulario de Validación</h1>
+    <form action="" onsubmit="validarFormulario(event)">
+        <!-- Campo Nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre">
+        <span id="error-nombre" class="error"></span>
+        <br><br>
+
+        <!-- Campo Apellido -->
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" placeholder="Escribe tu apellido">
+        <span id="error-apellido" class="error"></span>
+        <br><br>
+
+        <!-- Campo Teléfono -->
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" placeholder="Escribe tu teléfono">
+        <span id="error-telefono" class="error"></span>
+        <br><br>
+
+        <!-- Campo Correo -->
+        <label for="correo">Correo Electrónico:</label>
+        <input type="text" id="correo" placeholder="Escribe tu correo electrónico">
+        <span id="error-correo" class="error"></span>
+        <br><br>
+
+        <!-- Botón de Envío -->
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Mensaje de éxito -->
+    <p id="mensaje-exito" class="success"></p>
+</body>
+</html>
