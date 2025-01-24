@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción por edad</title>
+
+    <script>
+        const verificarPromocion = () => {
+            let edad = parseInt(document.getElementById("edad").value);
+
+            if (isNaN(edad) || edad<=0) { 
+                alert("Por favor, introduce una edad válida.");
+                return;
+            }
+
+            // Condicional ternario
+            let mensaje = (edad < 10)
+            ? "Tienes derecho a la promoción! Todos los productos cuestan 10 euros."
+            : "Lo sentimos, la promoción es solo para menores de 10 años";
+
+            document.getElementById("resultado").innerText = mensaje;
+        
+        };
+        
+    </script>
+
+</head>
+
+<body>
+    <h2>Promoción por edad</h2>
+
+    <form onsubmit="verificarPromocion(); return false;">
+        <label for="edad">Introduce tu edad:</label>
+        <input type="text" id="edad" placeholder="Introduce tu edad">
+
+        <button type="submit">Verificar</button>
+    </form>
+
+    <p id="resultado"></p>
+
+
+    
+</body>
+</html>

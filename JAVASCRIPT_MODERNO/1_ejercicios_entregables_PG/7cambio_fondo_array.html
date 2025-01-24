@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Fondo</title>
+
+    <script>
+        const cambiarFondo = () => {
+            // Lista de colores disponibles
+            const coloresDisponibles = ["rojo", "azul", "verde", "amarillo", "violeta"];
+
+            // Obtener el color ingresado por el usuario
+            let color = document.getElementById("color").value.toLowerCase().trim();
+
+            // Verificar si el color está en la lista
+            if (coloresDisponibles.includes(color)) {
+                // Cambiar el fondo de la página
+                document.body.style.backgroundColor = color;
+            } else {
+                // Mostrar alerta si el color no es válido
+                alert(`Por favor, elige un color válido: ${coloresDisponibles.join(", ")}`);
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <h2>Cambiar Fondo</h2>
+
+    <form>
+        <label for="color">Introduce un color:</label>
+        <input type="text" id="color" placeholder="Ej: rojo, azul, verde, amarillo, violeta">
+        <!-- "button" para evitar el envío del formulario -->
+        <button type="button" onclick="cambiarFondo()">Cambiar fondo</button>
+    </form>
+</body>
+</html>

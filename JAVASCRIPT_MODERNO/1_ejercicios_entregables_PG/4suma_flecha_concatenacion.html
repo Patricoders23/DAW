@@ -7,8 +7,18 @@
 
     <script>
         const sumarNumeros = () => {
-            let numero1 = 
-        }
+            // Obtengo los valores de los campos de texto
+            let num1 = parseFloat(document.getElementById("numero1").value);
+            let num2 = parseFloat(document.getElementById("numero2").value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Por favor, introduce números válidos.");
+                return;
+            }
+
+            let suma = num1 + num2;
+            document.getElementById("resultado").innerText = `La suma es: ${suma}`;
+        };
 
     </script>
 
@@ -24,7 +34,7 @@
     <label for="numero2">Segundo número:</label>
     <input type="text" id="numero2" placeholder="Escribe otro número"><br><br>
 
-    <button onclick="sumarNumeros">Sumar</button>
+    <button onclick="sumarNumeros()">Sumar</button>
     
     <p id="resultado"></p>
 </body>
