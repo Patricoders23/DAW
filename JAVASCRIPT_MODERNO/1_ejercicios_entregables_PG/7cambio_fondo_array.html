@@ -4,35 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambiar Fondo</title>
+</head>
+<body>
+    <h1>Elige un color</h1>
+    <input type="text" id="inp_color" placeholder="verde, naranja, rojo, azul, amarillo">
+    <input type="button" id="enviar" value="FONDO" onclick="cambiar_fondo()">
 
     <script>
-        const cambiarFondo = () => {
-            // Lista de colores disponibles
-            const coloresDisponibles = ["rojo", "azul", "verde", "amarillo", "violeta"];
+        function cambiar_fondo() {
+            // Lista de colores permitidos
+            const colores_disp = ['rojo', 'verde', 'naranja', 'azul', 'amarillo'];
 
-            // Obtener el color ingresado por el usuario
-            let color = document.getElementById("color").value.toLowerCase().trim();
+            // Obtener el valor ingresado por el usuario
+            let color = document.getElementById('inp_color').value.toLowerCase().trim();
 
-            // Verificar si el color está en la lista
-            if (coloresDisponibles.includes(color)) {
-                // Cambiar el fondo de la página
-                document.body.style.backgroundColor = color;
-            } else {
-                // Mostrar alerta si el color no es válido
-                alert(`Por favor, elige un color válido: ${coloresDisponibles.join(", ")}`);
+            // Usar switch para cambiar el color
+            switch (color) {
+                case 'rojo':
+                    document.body.style.backgroundColor = 'red';
+                    break;
+                case 'verde':
+                    document.body.style.backgroundColor = 'green';
+                    break;
+                case 'naranja':
+                    document.body.style.backgroundColor = 'orange';
+                    break;
+                case 'azul':
+                    document.body.style.backgroundColor = 'blue';
+                    break;
+                case 'amarillo':
+                    document.body.style.backgroundColor = 'yellow';
+                    break;
+                default:
+                    alert(`Color no válido. Por favor, elige uno de los colores disponibles: ${colores_disp.join(', ')}`);
             }
-        };
+        }
     </script>
-</head>
-
-<body>
-    <h2>Cambiar Fondo</h2>
-
-    <form>
-        <label for="color">Introduce un color:</label>
-        <input type="text" id="color" placeholder="Ej: rojo, azul, verde, amarillo, violeta">
-        <!-- "button" para evitar el envío del formulario -->
-        <button type="button" onclick="cambiarFondo()">Cambiar fondo</button>
-    </form>
 </body>
 </html>
