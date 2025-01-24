@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Saludo</title>
+
+    <script>
+        function mostrarMensaje(nombre) {
+            if (nombre && nombre.trim() !== "") {
+                let mensaje = `Hola ${nombre}, bienvenido a mi pagina`;
+                alert(mensaje); // Muestra el mensaje en una alerta
+                document.getElementById("nombre").innerText = mensaje;// Imprime el mensaje en el documento 
+            } else {
+                alert("Por favor, escribe tu nombre");
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Formulario de saludo</h1>
+
+    <form action="" onsubmit="mostrarMensaje(document.getElementById('nombre').value); return false">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre">
+        <button type="submit"> Enviar</button>
+    </form>
+
+    <!-- Aqui se imprime el mensaje -->
+    <p id="mensaje"></p>
+    
+</body>
+</html>
