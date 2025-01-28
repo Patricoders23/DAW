@@ -3,50 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejemplos de Funciones</title>
     <script>
-
-
-// Función Autoinvocada
+        // 1. Función Autoinvocada (IIFE)
         (function(nombre, anio) {
-            console.log(nombre,anio);
-        }) ("Pedro", 1999);
+            console.log(`Autoinvocada -> Nombre: ${nombre}, Año: ${anio}`);
+        })("Pedro", 1999);
 
-// Función CallBack
-        // let pruebaCallback = function(nombre,anio, formateo){
-        //     let copy = formateo(nombre,anio);
-        //     return copy;
-        // }
-        // let formateo = function(nombre, anio){
-        //     return nombre + " | " + anio;
-        // }
-        // console.log(pruebaCallback("Callback", 28, formateo));
+        // 2. Función Callback
+        let pruebaCallback = function(nombre, anio, formateo) {
+            let copy = formateo(nombre, anio);
+            return copy;
+        };
 
-// Función anónima
-        // let pruebaAnonima = function (nombre, anio=2025, formateo) {
-        //     let copy = "el copy es " + nombre + " " + anio;
-        //     return copy();
-        // }
-        // console.log(pruebaAnonima("Sandra", 2040));
+        let formateo = function(nombre, anio) {
+            return `Callback -> ${nombre} | ${anio}`;
+        };
 
-        // function crearCopy(nombre, anio){
-        //     let copy="el copy es " + nombre + " " + anio;
-        //     console.log(copy);
-        // }  
-        // crearCopy("Sandra",2025);
-        // ---------------------
+        console.log(pruebaCallback("Callback", 28, formateo));
 
-        // function imprimCopy() {
-        //     let solucion = console.log("Aramando-2023");
-        //     return solucion;
-        // }
-        // imprimCopy();
+        // 3. Función Anónima
+        let pruebaAnonima = function(nombre, anio = 2025) {
+            let copy = `Anónima -> el copy es ${nombre} ${anio}`;
+            return copy;
+        };
 
+        console.log(pruebaAnonima("Sandra", 2040));
+
+        // 4. Función Tradicional
+        function crearCopy(nombre, anio) {
+            let copy = `Tradicional -> el copy es ${nombre} ${anio}`;
+            console.log(copy);
+        }
+        crearCopy("Sandra", 2025);
+
+        // 5. Función Tradicional Simple
+        function imprimCopy() {
+            console.log("Tradicional Simple -> Armando-2023");
+        }
+        imprimCopy();
+
+        // 6. Función Tradicional con Parámetros
+        function sumar(a, b) {
+            return a + b;
+        }
+        console.log(`Tradicional con parámetros -> La suma es: ${sumar(4, 7)}`);
+
+        // 7. Función Anónima para Saludar
+        let saludar = function(nombre) {
+            return `¡Hola, ${nombre}!`;
+        };
+        console.log(saludar("Ana"));
+
+        // 8. Ejemplo Adicional con Callback
+        function mostrarResultado(resultado) {
+            console.log(`Callback -> El resultado es: ${resultado}`);
+        }
+
+        function sumarNumeros(a, b, callback) {
+            let suma = a + b;
+            callback(suma);
+        }
+
+        sumarNumeros(5, 3, mostrarResultado);
     </script>
-
-
 </head>
 <body>
-    
+    <h1>Ejemplos de Funciones</h1>
+    <p>Abre la consola para ver los resultados de cada función.</p>
 </body>
 </html>
