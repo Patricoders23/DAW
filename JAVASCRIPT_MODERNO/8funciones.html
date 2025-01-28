@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+// Función Autoinvocada
+        (function(nombre, anio) {
+            console.log(nombre,anio);
+        }) ("Pedro", 1999);
+
+// Función CallBack
+        // let pruebaCallback = function(nombre,anio, formateo){
+        //     let copy = formateo(nombre,anio);
+        //     return copy;
+        // }
+        // let formateo = function(nombre, anio){
+        //     return nombre + " | " + anio;
+        // }
+        // console.log(pruebaCallback("Callback", 28, formateo));
+
+// Función anónima
+        // let pruebaAnonima = function (nombre, anio=2025, formateo) {
+        //     let copy = "el copy es " + nombre + " " + anio;
+        //     return copy();
+        // }
+        // console.log(pruebaAnonima("Sandra", 2040));
+
+        // function crearCopy(nombre, anio){
+        //     let copy="el copy es " + nombre + " " + anio;
+        //     console.log(copy);
+        // }  
+        // crearCopy("Sandra",2025);
+        // ---------------------
+
+        // function imprimCopy() {
+        //     let solucion = console.log("Aramando-2023");
+        //     return solucion;
+        // }
+        // imprimCopy();
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
